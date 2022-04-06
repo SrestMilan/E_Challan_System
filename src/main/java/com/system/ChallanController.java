@@ -13,7 +13,7 @@ public class ChallanController {
     // display list of employees
     @GetMapping("/")
     public String viewHomePage(Model model) {
-        model.addAttribute("listEmployees",challan_serv.getChallanInformation());
+        model.addAttribute("challandata",challan_serv.getChallanInformation());
         return "admin";
     }
 }
