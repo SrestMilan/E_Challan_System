@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
 @Table(name = "adminsystem")
-public class Challanfiled {
+public class Challanfield {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -16,14 +16,12 @@ public class Challanfiled {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "place")
-    private String place;
-
     @Column(name = "license_number")
     private Integer license_number;
 
     @Column(name = "vehicle_number")
-    private String vehicler_number;
+    private String vehicle_number;
+
 
     @Column(name = "vehicle_type")
     private String vehicle_type;
@@ -31,8 +29,8 @@ public class Challanfiled {
     @Column(name = "created_by")
     private String created_by;
 
-    @Column(name = "rule_violence")
-    private String rule_violence;
+    @Column(name = "rule_broken")
+    private String rule_broken;
 
     public long getId() {
         return id;
@@ -50,14 +48,6 @@ public class Challanfiled {
         this.name = name;
     }
 
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
-    }
-
     public Integer getLicense_number() {
         return license_number;
     }
@@ -66,12 +56,12 @@ public class Challanfiled {
         this.license_number = license_number;
     }
 
-    public String getVehicler_number() {
-        return vehicler_number;
+    public String getVehicle_number() {
+        return vehicle_number;
     }
 
-    public void setVehicler_number(String vehicler_number) {
-        this.vehicler_number = vehicler_number;
+    public void setVehicle_number(String vehicle_number) {
+        this.vehicle_number = vehicle_number;
     }
 
     public String getVehicle_type() {
@@ -90,11 +80,17 @@ public class Challanfiled {
         this.created_by = created_by;
     }
 
-    public String getRule_violence() {
-        return rule_violence;
+    public String getRule_broken() {
+        return rule_broken;
     }
 
-    public void setRule_violence(String rule_violence) {
-        this.rule_violence = rule_violence;
+    public void setRule_broken(String rule_broken) {
+        this.rule_broken = rule_broken;
     }
+
+
+
+
+
+
 }

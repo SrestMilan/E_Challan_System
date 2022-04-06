@@ -6,14 +6,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ChallanServiceImp implements ChallanService {
-
+public class ChallanServiceImp implements ChallanService{
     @Autowired
-    private ChallanRepo challanRepos;
-
-
+    private ChallanRepo challan_repo;
     @Override
-    public List<Challanfiled> getChallanInformation() {
-        return challanRepos.findAll();
+    public List<Challanfield> getChallanInformation() {
+        return challan_repo.findAll();
     }
 }
