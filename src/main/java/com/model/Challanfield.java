@@ -16,6 +16,8 @@ public class Challanfield {
     @Column(name = "fullname")
     private String fullname;
 
+
+
     public void setId(long id) {
         this.id = id;
     }
