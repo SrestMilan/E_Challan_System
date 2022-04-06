@@ -12,7 +12,9 @@ public class Challanfield {
     // for ID
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID ")
+
+
+
     private long id;
 
 //for full name
