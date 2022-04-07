@@ -7,19 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name = "adminsystem")
+@Table(name = "admin_system")
 public class Challanfield {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
     private String name;
 
-
     @Column(name = "place")
     private String place;
-
-
 
     @Column(name = "license_number")
     private Integer license_number;
@@ -27,15 +26,15 @@ public class Challanfield {
     @Column(name = "vehicle_number")
     private String vehicle_number;
 
-
     @Column(name = "vehicle_type")
     private String vehicle_type;
 
     @Column(name = "created_by")
     private String created_by;
 
-    @Column(name = "rule_broken")
-    private String rule_broken;
+    @Column(name = "challan_type")
+    private String challan_type;
+
 
     public long getId() {
         return id;
@@ -51,6 +50,14 @@ public class Challanfield {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
     }
 
     public Integer getLicense_number() {
@@ -85,26 +92,11 @@ public class Challanfield {
         this.created_by = created_by;
     }
 
-    public String getRule_broken() {
-        return rule_broken;
+    public String getChallan_type() {
+        return challan_type;
     }
 
-    public void setRule_broken(String rule_broken) {
-        this.rule_broken = rule_broken;
+    public void setChallan_type(String challan_type) {
+        this.challan_type = challan_type;
     }
-
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
-    }
-
-
-
-
-
-
 }

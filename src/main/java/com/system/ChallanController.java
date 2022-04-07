@@ -1,5 +1,4 @@
 package com.system;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,49 +7,52 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
+
 @Controller
 public class ChallanController {
+
     @Autowired
-    private ChallanService challan_serv;
+    private ChallanService employeeService;
 
     // display list of employees
     @GetMapping("/")
-    public String viewAdminPage(Model model) {
-        model.addAttribute("challandata",challan_serv.getChallanInformation());
-        return "admin";
+    public String viewHomePage(Model model) {
+        model.addAttribute("listEmployees", employeeService.getAllEmployees());
+        return "index";
     }
 
-    @GetMapping("/showNewEChallanForm")
-    public String showNewEChallanForm(Model model){
-        Challanfield challan_save = new Challanfield();
-        model.addAttribute("challan_save", challan_save);
-        return "new_challandata";
-
+    @GetMapping("/showNewEmployeeForm")
+    public String showNewEmployeeForm(Model model) {
+        // create model attribute to bind form data
+        Challanfield employee = new Challanfield();
+        model.addAttribute("employee", employee);
+        return "new_employee";
     }
 
-    @PostMapping("/saveChallanData")
-    public String saveChallanData(@ModelAttribute("challan_save") Challanfield challan_save) {
+    @PostMapping("/saveEmployee")
+    public String saveEmployee(@ModelAttribute("employee") Challanfield employee) {
         // save employee to database
-        challan_serv.saveChallanData(challan_save);
+        employeeService.saveEmployee(employee);
         return "redirect:/";
     }
 
-    @GetMapping("/updateForm/{id}")
-    public String updateForm(@PathVariable(value = "id") long id, Model model) {
+    @GetMapping("/showFormForUpdate/{id}")
+    public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
 
         // get employee from the service
-        Challanfield challan_save = challan_serv.getChallanUserById(id);
+        Challanfield employee = employeeService.getEmployeeById(id);
 
         // set employee as a model attribute to pre-populate the form
-        model.addAttribute("challan_save", challan_save);
-        return "update_challanfield";
+        model.addAttribute("employee", employee);
+        return "update_employee";
     }
 
-    @GetMapping("/deleteChallanData/{id}")
-    public String deleteData(@PathVariable(value = "id") long id) {
+    @GetMapping("/deleteEmployee/{id}")
+    public String deleteEmployee(@PathVariable(value = "id") long id) {
 
         // call delete employee method
-        this.challan_serv.deleteChallanDataById(id);
+        this.employeeService.deleteEmployeeById(id);
         return "redirect:/";
     }
 }
