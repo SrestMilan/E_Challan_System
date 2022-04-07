@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>E-Challan System</title>
+</head>
+<body>
+<div class="container">
+    <h1>E-Challan System</h1>
+    <hr>
+    <h2>Save Employee</h2>
+    <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
+        <input type="text" th:field="*{name}" placeholder="Employee First Name" >
+        <input type="text" th:field="*{place}" placeholder="Employee Last Name" >
+        <input type="text" th:field="*{license_number}" placeholder="Employee Email" >
+        <input type="text" th:field="*{vehicle_number}" placeholder="Employee Email" >
+        <input type="text" th:field="*{vehicle_type}" placeholder="Employee Email" >
+        <input type="text" th:field="*{created_by}" placeholder="Employee Email" >
+        <input type="text" th:field="*{challan_type}" placeholder="Employee Email">
+        <button type="submit"> Save Data</button>
+    </form>
+    <hr>
+    <a th:href="@{/}"> Back to challan list</a>
+</div>
+</body>
+</html>

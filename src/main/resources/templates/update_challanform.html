@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Employee Management System</title>
+</head>
+<body>
+<div class="container">
+    <h1>Employee Management System</h1>
+    <hr>
+    <h2>Update Employee</h2>
+    <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
+        <!-- Add hidden form field to handle update -->
+        <input type="hidden" th:field="*{id}" />
+        <input type="text" th:field="*{name}" >
+        <input type="text" th:field="*{place}" >
+        <input type="text" th:field="*{license_number}" >
+        <input type="text" th:field="*{vehicle_number}" >
+        <input type="text" th:field="*{vehicle_type}">
+        <input type="text" th:field="*{created_by}">
+        <input type="text" th:field="*{challan_type}" >
+        <button type="submit"> Update Employee</button>
+    </form>
+    <hr>
+    <a th:href="@{/}"> Back to Employee List</a>
+</div>
+</body>
+
+</html>

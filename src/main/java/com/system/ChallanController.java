@@ -13,46 +13,40 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ChallanController {
 
     @Autowired
-    private ChallanService employeeService;
+    private ChallanService challanRepo;
 
     // display list of employees
     @GetMapping("/")
     public String viewHomePage(Model model) {
-        model.addAttribute("listEmployees", employeeService.getAllEmployees());
-        return "index";
+        model.addAttribute("challanData", challanRepo.getAllChallanInformation());
+        return "admin";
     }
 
-    @GetMapping("/showNewEmployeeForm")
-    public String showNewEmployeeForm(Model model) {
+    @GetMapping("/newChallanForm")
+    public String newChallanForm(Model model) {
         // create model attribute to bind form data
-        Challanfield employee = new Challanfield();
-        model.addAttribute("employee", employee);
-        return "new_employee";
+        Challanfield challan_save = new Challanfield();
+        model.addAttribute("challan_save", challan_save);
+        return "new_challanform";
     }
 
-    @PostMapping("/saveEmployee")
-    public String saveEmployee(@ModelAttribute("employee") Challanfield employee) {
+    @PostMapping("/saveEChallanData")
+    public String saveEChallanData(@ModelAttribute("challan_save") Challanfield challan_save) {
         // save employee to database
-        employeeService.saveEmployee(employee);
+        challanRepo.saveChallanData(challan_save);
         return "redirect:/";
     }
 
-    @GetMapping("/showFormForUpdate/{id}")
-    public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
-
-        // get employee from the service
-        Challanfield employee = employeeService.getEmployeeById(id);
-
-        // set employee as a model attribute to pre-populate the form
-        model.addAttribute("employee", employee);
-        return "update_employee";
+    @GetMapping("/formUpdate/{id}")
+    public String formUpdate(@PathVariable(value = "id") long id, Model model) {
+        Challanfield challan_save = challanRepo.getChallanDataById(id);
+        model.addAttribute("challan_save",challan_save);
+        return "update_challanform";
     }
 
-    @GetMapping("/deleteEmployee/{id}")
-    public String deleteEmployee(@PathVariable(value = "id") long id) {
-
-        // call delete employee method
-        this.employeeService.deleteEmployeeById(id);
+    @GetMapping("/deleteData/{id}")
+    public String deleteData(@PathVariable(value = "id") long id) {
+        this.challanRepo.deleteChallanDataById(id);
         return "redirect:/";
     }
 }

@@ -2,8 +2,8 @@ package com.system;
 
 import java.util.List;
 public interface ChallanService {
-    List <Challanfield> getAllEmployees();
-    void saveEmployee(Challanfield employee);
-    Challanfield getEmployeeById(long id);
-    void deleteEmployeeById(long id);
+    List <Challanfield> getAllChallanInformation();
+    void saveChallanData(Challanfield challan_save);
+    Challanfield getChallanDataById(long id);
+    void deleteChallanDataById(long id);
 }

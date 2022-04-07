@@ -10,32 +10,34 @@ import org.springframework.stereotype.Service;
 public class ChallanServiceFunc implements ChallanService {
 
     @Autowired
-    private ChallanRepository employeeRepository;
+    private ChallanRepository challan_repo;
+
 
     @Override
-    public List <Challanfield> getAllEmployees() {
-        return employeeRepository.findAll();
+    public List<Challanfield> getAllChallanInformation() {
+        return challan_repo.findAll();
     }
 
     @Override
-    public void saveEmployee(Challanfield employee) {
-        this.employeeRepository.save(employee);
+    public void saveChallanData(Challanfield challan_save) {
+        this.challan_repo.save(challan_save);
     }
 
     @Override
-    public Challanfield getEmployeeById(long id) {
-        Optional <Challanfield> optional = employeeRepository.findById(id);
-        Challanfield employee = null;
+    public Challanfield getChallanDataById(long id) {
+        Optional <Challanfield> optional = challan_repo.findById(id);
+        Challanfield challan_save = null;
         if (optional.isPresent()) {
-            employee = optional.get();
+            challan_save = optional.get();
         } else {
-            throw new RuntimeException(" Employee not found for id :: " + id);
+            throw new RuntimeException(" Challan data not found for id :: " + id);
         }
-        return employee;
+        return challan_save;
     }
 
     @Override
-    public void deleteEmployeeById(long id) {
-        this.employeeRepository.deleteById(id);
+    public void deleteChallanDataById(long id) {
+        this.challan_repo.deleteById(id);
     }
+
 }
