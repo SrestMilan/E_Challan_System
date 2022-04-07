@@ -10,11 +10,16 @@ import javax.persistence.Table;
 @Table(name = "adminsystem")
 public class Challanfield {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
     private String name;
+
+
+    @Column(name = "place")
+    private String place;
+
+
 
     @Column(name = "license_number")
     private Integer license_number;
@@ -86,6 +91,15 @@ public class Challanfield {
 
     public void setRule_broken(String rule_broken) {
         this.rule_broken = rule_broken;
+    }
+
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
     }
 
 

@@ -15,7 +15,9 @@
     <h2>Save Employee</h2>
 
     <form action="#" th:action="@{/saveChallanData}" th:object="${challan_save}" method="POST">
+
         <input type="text" th:field="*{name}" placeholder="User Name" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{place}" placeholder="Place" class="form-control mb-4 col-4">
 
         <input type="text" th:field="*{license_number}" placeholder="User license number" class="form-control mb-4 col-4">
 
