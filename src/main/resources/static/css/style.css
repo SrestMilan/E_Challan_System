@@ -1,7 +1,118 @@
+*{
+box-sizing: border-box;
+}
+
 .table1{
 border-collapse: collapse;
-margin-top:50px;
-margin-left:200px;
-padding-right:30px;
-width: 70%;
+width: 80%;
+margin-left:auto;
+margin-right:auto;
+margin-top:30px;
 }
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  font-size:20px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.th8{
+padding-left:40px;
+
+}
+
+.add{
+margin-left:1300px;
+margin-top:1px;
+}
+
+button{
+width:100px;
+height:32px;
+position: fixed;
+transition: all 0.2s ease-in 0s;
+z-index: 9999;
+cursor: pointer;
+
+.btn1:hover{
+background-position: 100%;
+  color: black;
+}
+
+.topic{
+text-align:center;
+
+}
+
+.btn2{
+height:30px;
+width:90px;
+margin-left:30px;
+background-color:#2f9ae7;
+border:none;
+color:white;
+
+
+}
+
+
+.btn3{
+height:30px;
+width:90px;
+margin-left:29px;
+background-color:#bb2e30;
+border:none;
+color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From here this is the css for login page */
+
+.admin{
+ background-color:	Aquamarine;
+text-align:center;
+width:40%;
+
+
+}
+.main{
+text-align:center;
+width:40%;
+height:150%;
+border: 15px;
+border-color: #FFDAB9;
+border-style: solid;
+background-color:Aquamarine;
+}
+
+/*
+.both{
+
+border: 10px;
+border-color: #000000;
+border-style: solid;
+
+width:80%;
+text-align:center;
+height:50%;
+
+}
+*/

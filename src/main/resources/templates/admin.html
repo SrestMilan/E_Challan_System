@@ -6,10 +6,12 @@
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
+<a th:href="@{/newChallanForm}" class="add"> <button class="btn1">Add People</button> </a>
+<h1 class="topic">Traffic Rules Violeted People</h1>
 <div class="main_admin">
-    <h1>Employees List</h1>
-    <a th:href="@{/newChallanForm}"> Add Employee </a>
-    <table border="1" class="table1">
+
+
+    <table class="table1">
         <thead>
         <tr>
             <th>name</th>
@@ -19,7 +21,7 @@
             <th>vehicle_type</th>
             <th>created_by</th>
             <th>challan_type</th>
-            <th> Actions </th>
+            <th class="th8"> Actions </th>
         </tr>
         </thead>
         <tbody>
@@ -31,12 +33,14 @@
             <td th:text="${challan_save.vehicle_type}"></td>
             <td th:text="${challan_save.created_by}"></td>
             <td th:text="${challan_save.challan_type}"></td>
-            <td> <a th:href="@{/formUpdate/{id}(id=${challan_save.id})}" >Update</a>
-                <a th:href="@{/deleteData/{id}(id=${challan_save.id})}" >Delete</a>
+            <td> <a th:href="@{/formUpdate/{id}(id=${challan_save.id})}"><button class="btn2">Update</button></a>
+                <a th:href="@{/deleteData/{id}(id=${challan_save.id})}"><button class="btn3">Delete</button></a>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
+
+
 </body>
 </html>
