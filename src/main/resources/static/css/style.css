@@ -2,6 +2,7 @@
 box-sizing: border-box;
 }
 
+/* for admin page*/
 .table1{
 border-collapse: collapse;
 width: 80%;
@@ -14,12 +15,13 @@ th, td {
   text-align: left;
   padding: 8px;
   font-size:20px;
+  background
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 th {
-  background-color: #04AA6D;
+  background-color: black;
   color: white;
 }
 
@@ -33,44 +35,84 @@ margin-left:1300px;
 margin-top:1px;
 }
 
-button{
-width:100px;
-height:32px;
-position: fixed;
-transition: all 0.2s ease-in 0s;
-z-index: 9999;
-cursor: pointer;
-
-.btn1:hover{
-background-position: 100%;
-  color: black;
-}
 
 .topic{
 text-align:center;
-
+color: #00CCCC;
 }
 
+.btn1{
+ margin-top:0px;
+  font-weight:bold;
+  width:100px;
+  height:30px;
+  color: black;
+  border:none;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.btn1:hover{
+ background-position: 100%;
+  color: #c266d3;
+}
 .btn2{
+font-weight:bold;
+width:100px;
 height:30px;
-width:90px;
-margin-left:30px;
-background-color:#2f9ae7;
+background-color:#1bbbe4;
+margin-left:20px;
 border:none;
-color:white;
-
-
 }
-
 
 .btn3{
+font-weight:bold;
+width:100px;
 height:30px;
-width:90px;
-margin-left:29px;
-background-color:#bb2e30;
+margin-left:30px;
+background:#f21a3e;
 border:none;
-color:white;
 }
+
+.image1{
+float:left;
+width:120px;
+height:50px;
+}
+
+/* for new challanform **/
+.img2 img{
+float:left;
+width:120px;
+height:50px;
+margin-top:-230px;
+}
+
+
+.contain{
+height:800px;
+width:1200px;
+}
+.contain form{
+margin-top:500px;
+margin-left:670px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

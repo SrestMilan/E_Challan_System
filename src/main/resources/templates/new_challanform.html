@@ -7,30 +7,30 @@
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <h1>E-Challan System</h1>
-    <hr>
-    <h2>Save Employee</h2>
-    <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
-        <br>
-        <input type="text" th:field="*{name}" placeholder="Employee First Name" >
-        <br>
-        <input type="text" th:field="*{place}" placeholder="Employee Last Name" >
-        <br>
-        <input type="text" th:field="*{license_number}" placeholder="Employee Email" >
-        <br>
-        <input type="text" th:field="*{vehicle_number}" placeholder="Employee Email" >
-        <br>
-        <input type="text" th:field="*{vehicle_type}" placeholder="Employee Email" >
-        <br>
-        <input type="text" th:field="*{created_by}" placeholder="Employee Email" >
-        <br>
-        <input type="text" th:field="*{challan_type}" placeholder="Employee Email">
-        <br>
-        <button type="submit"> Save Data</button>
-    </form>
-    <hr>
-    <a th:href="@{/}"> Back to challan list</a>
+<div class="img2">
+    <img src="../static/image/logo.png"  th:src="@{image/logo.png}"/>
 </div>
+
+
+<div class="contain">
+    <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
+        <legend >Name:</legend> <input type="text" th:field="*{name}" placeholder="Enter the name">
+        <legend >Place:</legend><input type="text" th:field="*{place}" placeholder="Enter the place">
+        <legend>License Number:</legend> <input type="text" th:field="*{license_number}" placeholder="Enter the license number">
+        <legend>Vehicle Number:</legend> <input type="text" th:field="*{vehicle_number}" placeholder="Enter the Vehicle number">
+        <legend >Vehicle type: </legend> <input type="text" th:field="*{vehicle_type}" placeholder="Enter the vehicle type"  >
+        <legend >Created by: </legend><input type="text" th:field="*{created_by}" placeholder="Name who created challan" >
+        <legend >Challan type:</legend> <input type="text" th:field="*{challan_type}" placeholder="Challan type" >
+        <br>
+        <br>
+        <button type="submit" class="btn5"> Save Data</button>
+        <br>
+        <br>
+        <a th:href="@{/admin}"> <button class="btn4">Back to challan list</button></a>
+    </form>
+</div>
+
+
+
 </body>
 </html>
