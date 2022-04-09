@@ -218,6 +218,7 @@ text-align:center;
 padding-top: 180px;
 height:550px;
 width:550px;
+background-color:#FFFFCC;
 }
 
 h1{
@@ -245,7 +246,7 @@ color:#0000FF;
   color: #0000FF;
 }
 .main img{
-height:150px;
+height:180px;
 width:40%;
 margin-top:-160px;
 }
