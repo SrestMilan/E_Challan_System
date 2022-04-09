@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="ISO-8859-1">
     <title>E-Challan System</title>
@@ -13,9 +12,10 @@
 <div class="img3">
     <img src="../static/image/traffic.jpeg"  th:src="@{image/traffic.jpeg}"/>
 </div>
-
+<div class="back">
+    <a th:href="@{/}"><button class="btnnn4">Back</button></a>
+</div>
 <div class="contain">
-
     <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
         <legend >Name:</legend> <input type="text" th:field="*{name}" placeholder="Enter the name">
         <legend >Place:</legend><input type="text" th:field="*{place}" placeholder="Enter the place">
@@ -23,13 +23,16 @@
         <legend>Vehicle Number:</legend> <input type="text" th:field="*{vehicle_number}" placeholder="Enter the Vehicle number">
         <legend >Vehicle type: </legend> <input type="text" th:field="*{vehicle_type}" placeholder="Enter the vehicle type"  >
         <legend >Created by: </legend><input type="text" th:field="*{created_by}" placeholder="Name who created challan" >
-        <legend >Challan type:</legend> <input type="text" th:field="*{challan_type}" placeholder="Challan type" >
+        <legend >Challan type:</legend>
+        <select th:field="*{challan_type}">
+            <option th:each="p :${type}" th:value="${p}" th:text="${p}"></option>
+        </select>
         <br>
         <br>
         <button type="submit" class="btn5"> Save Data</button>
         <br>
         <br>
-        <a th:href="@{/}"> Back to Employee List</a>
+
     </form>
 </div>
 

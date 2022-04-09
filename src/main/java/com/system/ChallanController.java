@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Arrays;
+import java.util.List;
 
 
 @Controller
@@ -36,6 +38,9 @@ public class ChallanController {
         // create model attribute to bind form data
         Challanfield challan_save = new Challanfield();
         model.addAttribute("challan_save", challan_save);
+
+        List<String>type= Arrays.asList("Drinking Alcohol","No helmet");
+        model.addAttribute("type",type);
         return "new_challanform";
     }
 
