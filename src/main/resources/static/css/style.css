@@ -176,49 +176,16 @@ height:70px;
 margin-top:-100px;
 }
 
-
-
-
 /* From here this is the css for login page */
-
-/*
-.main{
-text-align:center;
-width:40%;
-height:200%;
-border: 15px;
-border-color: #FFDAB9;
-border-style: solid;
-background-color:Aquamarine;
-}
-.but{
-color:orange;
-
-}
-
-
-
-.both{
-
-border: 10px;
-border-color: #000000;
-border-style: solid;
-
-width:80%;
-text-align:center;
-height:50%;
-
-}
-*/
 .main{
 border: 15px;
 border-color: #FFDAB9;
 border-style: solid;
 text-align:center;
 padding-top: 180px;
-height:550px;
+height:300px;
 width:550px;
-background-color:#FFFFCC;
+background-color:white;
 }
 
 h1{

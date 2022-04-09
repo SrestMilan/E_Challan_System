@@ -37,7 +37,7 @@ public class ChallanController {
         Challanfield challan_save = new Challanfield();
         model.addAttribute("challan_save", challan_save);
 
-        List<String>type= Arrays.asList("Drinking and Driving ","Violations of traffic rules","Driving without a valid license","Speed Driving","Causing traffic obstruction");
+        List<String>type= Arrays.asList("Drinking Alcohol","No helmet");
         model.addAttribute("type",type);
         return "new_challanform";
     }
