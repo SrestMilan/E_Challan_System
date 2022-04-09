@@ -19,7 +19,7 @@ th, td {
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 th {
-  background-color: black;
+  background-color: #04AA6D;
   color: white;
 }
 
@@ -33,19 +33,13 @@ margin-left:1300px;
 margin-top:1px;
 }
 
-.btn1{
-  height:30px;
-  width:90px;
-  color: #fff;
-  border: none;
-  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
-  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
-  background-size: 500px;
-  background-repeat: no-repeat;
-  background-position: 0%;
-  -webkit-transition: background 300ms ease-in-out;
-  transition: background 300ms ease-in-out;
-}
+button{
+width:100px;
+height:32px;
+position: fixed;
+transition: all 0.2s ease-in 0s;
+z-index: 9999;
+cursor: pointer;
 
 .btn1:hover{
 background-position: 100%;
@@ -80,3 +74,45 @@ color:white;
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* From here this is the css for login page */
+
+.admin{
+ background-color:	Aquamarine;
+text-align:center;
+width:40%;
+
+
+}
+.main{
+text-align:center;
+width:40%;
+height:150%;
+border: 15px;
+border-color: #FFDAB9;
+border-style: solid;
+background-color:Aquamarine;
+}
+
+/*
+.both{
+
+border: 10px;
+border-color: #000000;
+border-style: solid;
+
+width:80%;
+text-align:center;
+height:50%;
+
+}
+*/

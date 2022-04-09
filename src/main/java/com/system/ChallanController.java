@@ -30,6 +30,7 @@ public class ChallanController {
 
 
 
+
     @GetMapping("/newChallanForm")
     public String newChallanForm(Model model) {
         // create model attribute to bind form data
