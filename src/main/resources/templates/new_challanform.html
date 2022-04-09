@@ -12,13 +12,21 @@
     <hr>
     <h2>Save Employee</h2>
     <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
+        <br>
         <input type="text" th:field="*{name}" placeholder="Employee First Name" >
+        <br>
         <input type="text" th:field="*{place}" placeholder="Employee Last Name" >
+        <br>
         <input type="text" th:field="*{license_number}" placeholder="Employee Email" >
+        <br>
         <input type="text" th:field="*{vehicle_number}" placeholder="Employee Email" >
+        <br>
         <input type="text" th:field="*{vehicle_type}" placeholder="Employee Email" >
+        <br>
         <input type="text" th:field="*{created_by}" placeholder="Employee Email" >
+        <br>
         <input type="text" th:field="*{challan_type}" placeholder="Employee Email">
+        <br>
         <button type="submit"> Save Data</button>
     </form>
     <hr>
