@@ -121,45 +121,20 @@ color:black;
 
 
 
+/* css login code */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* From here this is the css for login page */
-
-.admin{
- background-color:	Aquamarine;
-text-align:center;
-width:40%;
-
-
+.login{
+color:orange;
 }
-.main{
-text-align:center;
-width:40%;
-height:200%;
-border: 15px;
-border-color: #FFDAB9;
-border-style: solid;
-background-color:Aquamarine;
-}
+
+
+
+
+
+
+
+
+
 
 /*
 .both{
