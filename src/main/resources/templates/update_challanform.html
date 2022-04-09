@@ -2,29 +2,43 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Employee Management System</title>
+    <title>E-Challan System</title>
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <h1>Employee Management System</h1>
-    <hr>
-    <h2>Update Employee</h2>
-    <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
-        <!-- Add hidden form field to handle update -->
-        <input type="hidden" th:field="*{id}" />
-        <input type="text" th:field="*{name}" >
-        <input type="text" th:field="*{place}" >
-        <input type="text" th:field="*{license_number}" >
-        <input type="text" th:field="*{vehicle_number}" >
-        <input type="text" th:field="*{vehicle_type}">
-        <input type="text" th:field="*{created_by}">
-        <input type="text" th:field="*{challan_type}" >
-        <button type="submit"> Update Employee</button>
-    </form>
-    <hr>
-    <a th:href="@{/}"> Back to Employee List</a>
+<div class="img4">
+    <img src="../static/image/log1.png"  th:src="@{image/log1.png}"/>
+</div>
+
+<div class="back">
+    <a th:href="@{/}"><button class="btnnn4">Back</button></a>
+</div>
+
+<div class="main1">
+
+    <div class="img3">
+        <img src="../static/image/traffic.jpeg"  th:src="@{image/traffic.jpeg}"/>
+    </div>
+    <div class="contain">
+        <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
+            <input type="hidden" th:field="*{id}" />
+            <legend >Name:</legend> <input type="text" th:field="*{name}" placeholder="Enter the name">
+            <legend >Place:</legend><input type="text" th:field="*{place}" placeholder="Enter the place">
+            <legend>License Number:</legend> <input type="text" th:field="*{license_number}" placeholder="Enter the license number">
+            <legend>Vehicle Number:</legend> <input type="text" th:field="*{vehicle_number}" placeholder="Enter the Vehicle number">
+            <legend >Vehicle type: </legend> <input type="text" th:field="*{vehicle_type}" placeholder="Enter the vehicle type"  >
+            <legend >Created by: </legend><input type="text" th:field="*{created_by}" placeholder="Name who created challan" >
+            <legend >Challan type:</legend>
+            <select th:field="*{challan_type}">
+                <option th:each="p :${type}" th:value="${p}" th:text="${p}"></option>
+            </select>
+            <br>
+            <br>
+            <button type="submit" class="btn5"> Update Data</button>
+            <br>
+            <br>
+        </form>
+    </div>
 </div>
 </body>
-
 </html>

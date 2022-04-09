@@ -31,8 +31,6 @@ public class ChallanController {
   }
 
 
-
-
     @GetMapping("/newChallanForm")
     public String newChallanForm(Model model) {
         // create model attribute to bind form data
@@ -55,6 +53,8 @@ public class ChallanController {
     public String formUpdate(@PathVariable(value = "id") long id, Model model) {
         Challanfield challan_save = challanRepo.getChallanDataById(id);
         model.addAttribute("challan_save",challan_save);
+        List<String>type= Arrays.asList("Drinking Alcohol","No helmet");
+        model.addAttribute("type",type);
         return "update_challanform";
     }
 
