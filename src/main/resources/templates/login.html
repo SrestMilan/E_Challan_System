@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="ISO-8859-1">
-    <title>Login Portal</title>
+    <title>Admin Login Portal</title>
     <link th:href="@{/css/style.css}" rel="stylesheet">
+
 </head>
-
-
-
-
 <body>
+<div class="loimg">
+    <img src="../static/image/log.png"  th:src="@{image/log.png}"/>
+</div>
 <div class="main">
 
         <h1>E-Challan Login Form</h1>
 
         <form method="post"><!------form created--->
-           <h4><div class="first"> <span class="far "></span> <input type="text" name="userName" id="user_Name" placeholder="Username"> </div></h4>
+           <h4 class="first"> <span class="far "></span> <input type="text" name="userName" id="user_Name" placeholder="Username"></h4>
 
-           <h4> <div class="second"> <span class="fas "></span> <input type="password" name="password" id="pwd1" placeholder="Password"></div></h4>
+           <h4 class="second"> <span class="fas "></span> <input type="password" name="password" id="pwd1" placeholder="Password"></h4>
 
-           <h4><button class="bttn1">Login</button></h4>
+           <h2><button class="but">Login Button</button></h2>
 
         </form>
 
@@ -28,8 +28,6 @@
 
 </div>
 </body>
-
-</div>
 </html>
 
 
