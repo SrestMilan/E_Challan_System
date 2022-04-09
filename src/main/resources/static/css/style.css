@@ -4,7 +4,10 @@ box-sizing: border-box;
 
 .table1{
 border-collapse: collapse;
-width: 70%;
+width: 80%;
+margin-left:auto;
+margin-right:auto;
+margin-top:30px;
 }
 
 th, td {
@@ -18,3 +21,24 @@ th {
   background-color: #04AA6D;
   color: white;
 }
+
+.add{
+margin-left:1300px;
+margin-top:1px;
+}
+
+button{
+width:100px;
+height:32px;
+position: fixed;
+transition: all 0.2s ease-in 0s;
+z-index: 9999;
+cursor: pointer;
+
+}
+
+.topic{
+text-align:center;
+
+}
+
