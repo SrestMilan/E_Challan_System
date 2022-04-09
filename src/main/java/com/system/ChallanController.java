@@ -23,6 +23,7 @@ public class ChallanController {
         return "admin";
     }
 
+
     @GetMapping("/newChallanForm")
     public String newChallanForm(Model model) {
         // create model attribute to bind form data
