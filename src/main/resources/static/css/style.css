@@ -18,3 +18,44 @@ th {
   background-color: #04AA6D;
   color: white;
 }
+
+
+
+
+
+
+
+
+
+/* From here this is the css for login page */
+
+.admin{
+ background-color:	Aquamarine;
+text-align:center;
+width:40%;
+
+
+}
+.main{
+text-align:center;
+width:40%;
+height:150%;
+border: 15px;
+border-color: #FFDAB9;
+border-style: solid;
+background-color:Aquamarine;
+}
+
+/*
+.both{
+
+border: 10px;
+border-color: #000000;
+border-style: solid;
+
+width:80%;
+text-align:center;
+height:50%;
+
+}
+*/
