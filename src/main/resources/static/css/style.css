@@ -178,11 +178,14 @@ margin-top:-100px;
 
 /* From here this is the css for login page */
 .main{
-border: 15px;
-border-color: #FFDAB9;
+padding: 50px;
+margin: 25%;
+margin-top:5%;
+border: 20px;
+border-color: #663300;
 border-style: solid;
 text-align:center;
-padding-top: 180px;
+padding-top: 200px;
 height:300px;
 width:550px;
 background-color:white;
@@ -208,12 +211,22 @@ color:#0000FF;
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
-.but:hover{
- background-position: 100%;
-  color: #0000FF;
-}
+
 .main img{
 height:180px;
 width:40%;
 margin-top:-160px;
+}
+.but{
+width:25%;
+height:40px;
+background:green;
+color:white;
+text-bold:20px;
+margin:10px;
+}
+.first{
+margin:5%;
+text-align:center;
+font-size: 20px;
 }
