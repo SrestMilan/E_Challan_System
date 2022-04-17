@@ -12,7 +12,7 @@ th, td {
   text-align: left;
   padding: 8px;
   font-size:20px;
-  background
+
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -178,14 +178,18 @@ margin-top:-100px;
 
 /* From here this is the css for login page */
 .main{
-border: 15px;
-border-color: #FFDAB9;
+
+margin:25%;
+padding:6%;
+border: 20px;
+border-color: #6a4940;
 border-style: solid;
 text-align:center;
 padding-top: 180px;
 height:300px;
 width:550px;
 background-color:white;
+margin-top:10px;
 }
 
 h1{
@@ -215,6 +219,7 @@ width:40%;
 margin-top:-160px;
 }
 .but{
+
 width:25%;
 height:40px;
 background:green;
