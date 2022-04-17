@@ -178,14 +178,11 @@ margin-top:-100px;
 
 /* From here this is the css for login page */
 .main{
-padding: 50px;
-margin: 25%;
-margin-top:5%;
-border: 20px;
-border-color: #663300;
+border: 15px;
+border-color: #FFDAB9;
 border-style: solid;
 text-align:center;
-padding-top: 200px;
+padding-top: 180px;
 height:300px;
 width:550px;
 background-color:white;
