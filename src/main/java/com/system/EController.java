@@ -8,8 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 
+
 @Controller
-public class ChallanController {
+public class EController {
 
     @Autowired(required = true)
     private ChallanService challanRepo;
@@ -21,7 +22,10 @@ public class ChallanController {
         return "login";
     }
 
-    // display list of employees
+
+
+
+
     @GetMapping("/viewHomePage")
     public String viewHomePage(Model model) {
         model.addAttribute("challanData", challanRepo.getAllChallanInformation());
