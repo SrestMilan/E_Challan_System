@@ -3,6 +3,7 @@ package com.system;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import java.util.Arrays;
 import java.util.List;
@@ -15,14 +16,20 @@ public class EController {
     @Autowired(required = true)
     private ChallanService challanRepo;
 
-    @GetMapping("/")
-    public String login(Model model){
-        User user=new User();
-        model.addAttribute("user",user);
+    @GetMapping("/login")
+    public String login(){
         return "login";
     }
 
-
+    @RequestMapping(value = "/login", method=RequestMethod.POST)
+    public String viewHomePage(ModelMap model, @RequestParam String userName, @RequestParam String password){
+        if(userName.equals("admin")&& password.equals("admin")){
+            return "admin";
+        }
+        else{
+            return "login";
+        }
+    }
 
 
 
@@ -40,8 +47,7 @@ public class EController {
         // create model attribute to bind form data
         Challanfield challan_save = new Challanfield();
         model.addAttribute("challan_save", challan_save);
-
-        List<String>type= Arrays.asList("Drinking Alcohol","No helmet");
+        List<String>type= Arrays.asList("Drinking Alcohol","No helmet","No side light","High Speed");
         model.addAttribute("type",type);
         return "new_challanform";
     }
@@ -53,11 +59,12 @@ public class EController {
         return "redirect:/viewHomePage";
     }
 
+
     @GetMapping("/formUpdate/{id}")
     public String formUpdate(@PathVariable(value = "id") long id, Model model) {
         Challanfield challan_save = challanRepo.getChallanDataById(id);
         model.addAttribute("challan_save",challan_save);
-        List<String>type= Arrays.asList("Drinking Alcohol","No helmet");
+        List<String>type= Arrays.asList("Drinking Alcohol","No helmet","No side light","High Speed");
         model.addAttribute("type",type);
         return "update_challanform";
     }

@@ -169,11 +169,89 @@ height:30px;
 }
 
 /** for update page ****/
-.img4 img{
+.imgs img{
 float:left;
 width:120px;
 height:70px;
 margin-top:-100px;
+}
+
+
+.main1{
+height:600px;
+width:100%;
+border:none;
+margin-top:100px;
+background:black;
+color:white;
+
+}
+.imgs3 img{
+width:500px;
+height:500px;
+margin-top:50px;
+margin-left:250px;
+border:none;
+}
+
+
+.btnnn4{
+font-weight:bold;
+float:right;
+border:none;
+color:black;
+height:30px;
+width:100px;
+margin-top:-90px;
+background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+background-size: 500px;
+background-repeat: no-repeat;
+ background-position: 0%;
+-webkit-transition: background 300ms ease-in-out;
+transition: background 300ms ease-in-out;
+
+}
+
+.btnnn4:hover{
+ background-position: 100%;
+  color: #c266d3;
+}
+.contain{
+height:600px;
+width:700px;
+border:none;
+margin-left:680px;
+margin-top:100px;
+
+
+
+}
+.contain form{
+margin-top:-610px;
+margin-left:240px;
+line-height:30px;
+}
+
+.main1 .contain Legend{
+color:white;
+font-weight:bold;
+font-size:20px;
+}
+
+.btn5{
+font-weight:bold;
+width:100px;
+height:30px;
+margin-left:10px;
+background:green;
+border:none;
+}
+
+.contain input,select{
+width:200px;
+height:30px;
+
 }
 
 /* From here this is the css for login page */
