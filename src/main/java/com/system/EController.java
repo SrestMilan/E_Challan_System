@@ -16,15 +16,20 @@ public class EController {
     @Autowired(required = true)
     private ChallanService challanRepo;
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String login(){
         return "login";
     }
 
-    @RequestMapping(value = "/login", method=RequestMethod.POST)
+
+
+    @RequestMapping(value = "/", method=RequestMethod.POST)
     public String viewHomePage(ModelMap model, @RequestParam String userName, @RequestParam String password){
         if(userName.equals("admin")&& password.equals("admin")){
-            return "admin";
+            return "redirect:/viewHomePage";
+        }
+        else if(userName.equals("traffic")&& password.equals("traffic")){
+            return "redirect:/viewTraffic";
         }
         else{
             return "login";
@@ -40,11 +45,17 @@ public class EController {
     }
 
 
+    @GetMapping("/viewTraffic")
+    public String viewTraffic(Model model) {
+        model.addAttribute("challanData", challanRepo.getAllChallanInformation());
+        return "traffic";
+    }
+
+
 
 
     @GetMapping("/newChallanForm")
     public String newChallanForm(Model model) {
-        // create model attribute to bind form data
         Challanfield challan_save = new Challanfield();
         model.addAttribute("challan_save", challan_save);
         List<String>type= Arrays.asList("Drinking Alcohol","No helmet","No side light","High Speed");
@@ -54,10 +65,11 @@ public class EController {
 
     @PostMapping("/saveEChallanData")
     public String saveEChallanData(@ModelAttribute("challan_save") Challanfield challan_save) {
-        // save employee to database
         challanRepo.saveChallanData(challan_save);
         return "redirect:/viewHomePage";
     }
+
+
 
 
     @GetMapping("/formUpdate/{id}")
