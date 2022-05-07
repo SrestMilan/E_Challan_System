@@ -86,5 +86,10 @@ public class EController {
         this.challanRepo.deleteChallanDataById(id);
         return "redirect:/viewHomePage";
     }
+    @GetMapping("/homepage")
+    public String homepage(Model model) {
+        model.addAttribute("challanData", challanRepo.getAllChallanInformation());
+        return "homepage";
+    }
 
 }
