@@ -18,13 +18,13 @@ public class EController {
 
     @GetMapping("/")
     public String login(){
-        return "login";
+        return "homepage";
     }
 
 
 
     @RequestMapping(value = "/", method=RequestMethod.POST)
-    public String viewHomePage(ModelMap model, @RequestParam String userName, @RequestParam String password){
+    public String viewTraf(ModelMap model, @RequestParam String userName, @RequestParam String password){
         if(userName.equals("admin")&& password.equals("admin")){
             return "redirect:/viewHomePage";
         }
@@ -32,7 +32,7 @@ public class EController {
             return "redirect:/viewTraffic";
         }
         else{
-            return "login";
+            return "homepage";
         }
     }
 
@@ -85,11 +85,6 @@ public class EController {
     public String deleteData(@PathVariable(value = "id") long id) {
         this.challanRepo.deleteChallanDataById(id);
         return "redirect:/viewHomePage";
-    }
-    @GetMapping("/homepage")
-    public String homepage(Model model) {
-        model.addAttribute("challanData", challanRepo.getAllChallanInformation());
-        return "homepage";
     }
 
 }
