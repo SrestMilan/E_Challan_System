@@ -36,7 +36,7 @@ th, td {
 td{
 color:white;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+
 
 th {
   background-color: black;
@@ -82,26 +82,19 @@ font-size:30px;
  background-position: 100%;
   color: #c266d3;
 }
+/*
 .btn2{
 font-weight:bold;
 width:100px;
 height:30px;
 background-color:#1bbbe4;
-margin-left:20px;
+margin-top:20px;
 border:none;
 }
-
-.btn3{
-font-weight:bold;
-width:100px;
-height:30px;
-margin-top:35px;
-
-margin-left:20px;
-background:#f21a3e;
-border:none;
+*/
+.btn2{
+background:black;
 }
-
 
 
 /* for new challanform **/
