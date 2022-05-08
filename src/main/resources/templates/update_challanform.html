@@ -6,42 +6,84 @@
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-<div class="imgs">
-    <img th:src="@{/image/logos1.png}" alt="">
-</div>
+
 <div class="back">
-    <a th:href="@{/viewHomePage}"><button class="btnnn4">Back</button></a>
+    <a th:href="@{/viewTraffic}"><button class="btnnn4">Back</button></a>
 </div>
 
 <div class="head">
-    <h1>E-Challan System Update Data Form</h1>
+    <h1>New E-Challan System Data Form</h1>
 </div>
 
-<div class="main1">
 
-    <div class="imgs3">
-        <img th:src="@{/image/traffic.jpeg}" alt="">
-    </div>
-    <div class="contain">
-        <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
-            <input type="hidden" th:field="*{id}" />
-            <legend >Name:</legend> <input type="text" th:field="*{name}" placeholder="Enter the name">
-            <legend >Place:</legend><input type="text" th:field="*{place}" placeholder="Enter the place">
-            <legend>License Number:</legend> <input type="text" th:field="*{license_number}" placeholder="Enter the license number">
-            <legend>Vehicle Number:</legend> <input type="text" th:field="*{vehicle_number}" placeholder="Enter the Vehicle number">
-            <legend >Vehicle type: </legend> <input type="text" th:field="*{vehicle_type}" placeholder="Enter the vehicle type"  >
-            <legend >Created by: </legend><input type="text" th:field="*{created_by}" placeholder="Name who created challan" >
-            <legend >Challan type:</legend>
-            <select th:field="*{challan_type}">
-                <option th:each="p :${type}" th:value="${p}" th:text="${p}"></option>
-            </select>
-            <br>
-            <br>
-            <button type="submit" class="btn5"> Update Data</button>
-            <br>
-            <br>
-        </form>
-    </div>
+<div class="container">
+    <header>Update Challan Data</header>
+
+    <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">Personal Details</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Full Name</label>
+                        <input type="text" th:field="*{name}" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Age</label>
+                        <input type="number" th:field="*{age}" placeholder="Enter your age" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Location</label>
+                        <input type="text" th:field="*{place}" placeholder="Enter the location" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>License Number</label>
+                        <input type="number" th:field="*{license_number}"placeholder="Enter your license number" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Vehicle Number</label>
+                        <input type="text" th:field="*{vehicle_number}" placeholder="Enter vehicle number" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Vehicle Type</label>
+                        <select th:field="*{vehicle_type}">
+                            <option th:each="p :${v_type}" th:value="${p}" th:text="${p}"></option>
+                        </select>
+
+                    </div>
+
+                    <div class="input-field">
+                        <label >Created By:</label>
+                        <select th:field="*{created_by}">
+                            <option th:each="p :${create}" th:value="${p}" th:text="${p}"></option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label >Challan type:</label>
+                        <select th:field="*{challan_type}">
+                            <option th:each="p :${type}" th:value="${p}" th:text="${p}"></option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Challan Rate</label>
+                        <input type="number" th:field="*{challan_rate}" placeholder="Enter Challan Rate" required>
+
+                    </div>
+                    <button class="nextBtn">
+                        Update
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </form>
 </div>
 
 </body>

@@ -60,13 +60,20 @@ public class EController {
         model.addAttribute("challan_save", challan_save);
         List<String>type= Arrays.asList("Drinking Alcohol","No helmet","No side light","High Speed");
         model.addAttribute("type",type);
+
+        List<String>create= Arrays.asList("Admin");
+        model.addAttribute("create",create);
+
+        List<String>v_type= Arrays.asList("Two Wheeler", "Three Wheller","Four Wheeler");
+        model.addAttribute("v_type",v_type);
+
         return "new_challanform";
     }
 
     @PostMapping("/saveEChallanData")
     public String saveEChallanData(@ModelAttribute("challan_save") Challanfield challan_save) {
         challanRepo.saveChallanData(challan_save);
-        return "redirect:/viewHomePage";
+        return "redirect:/viewTraffic";
     }
 
 
@@ -78,6 +85,12 @@ public class EController {
         model.addAttribute("challan_save",challan_save);
         List<String>type= Arrays.asList("Drinking Alcohol","No helmet","No side light","High Speed");
         model.addAttribute("type",type);
+
+        List<String>create= Arrays.asList("Admin");
+        model.addAttribute("create",create);
+
+        List<String>v_type= Arrays.asList("Two Wheeler", "Three Wheller","Four Wheeler");
+        model.addAttribute("v_type",v_type);
         return "update_challanform";
     }
 

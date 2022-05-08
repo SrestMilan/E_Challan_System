@@ -2,6 +2,7 @@
 body{
 background-image:url("../image/bc.jpg");
 background-size:cover;
+
 }
 *{
 
@@ -120,7 +121,7 @@ ul li a:hover{
     font-size: 65px
 }
 
-.form{
+#form{
     width: 250px;
     height: 380px;
     background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
@@ -132,7 +133,7 @@ ul li a:hover{
     padding: 25px;
 }
 
-.form h2{
+#form h2{
     width: 220px;
     font-family: sans-serif;
     text-align: center;
@@ -144,7 +145,7 @@ ul li a:hover{
     padding: 8px;
 }
 
-.form input{
+#form input{
     width: 240px;
     height: 35px;
     background: transparent;
@@ -159,7 +160,7 @@ ul li a:hover{
     font-family: sans-serif;
 }
 
-.form input:focus{
+#form input:focus{
     outline: none;
 }
 

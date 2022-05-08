@@ -6,31 +6,38 @@
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-<img src="../static/image/logo.png"  class="image1" th:src="@{image/logo.png}"/>
-<h1 class="topic">E-Challan Sysem Data</h1>
+<div class="home">
+    <a th:href="@{/}"><h3>HomePage</h3></a>
+</div>
+
+<div class="topic">E-Challan System Data</div>
 <div class="main_admin">
     <table class="table1">
         <thead>
         <tr>
             <th>name</th>
-            <th>place</th>
+            <th>age</th>
+            <th>Location</th>
             <th>license_number</th>
             <th>vehicle_number</th>
             <th>vehicle_type</th>
             <th>created_by</th>
             <th>challan_type</th>
+            <th>challan_rate</th>
             <th class="th8"> Actions </th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="challan_save : ${challanData}">
             <td th:text="${challan_save.name}"></td>
+            <td th:text="${challan_save.age}"></td>
             <td th:text="${challan_save.place}"></td>
             <td th:text="${challan_save.license_number}"></td>
             <td th:text="${challan_save.vehicle_number}"></td>
             <td th:text="${challan_save.vehicle_type}"></td>
             <td th:text="${challan_save.created_by}"></td>
             <td th:text="${challan_save.challan_type}"></td>
+            <td th:text="${challan_save.challan_rate}"></td>
             <td> <a th:href="@{/formUpdate/{id}(id=${challan_save.id})}"><button class="btn2">Update</button></a>
                 <a th:href="@{/deleteData/{id}(id=${challan_save.id})}"><button class="btn3">Delete</button></a>
             </td>

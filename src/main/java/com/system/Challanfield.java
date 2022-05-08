@@ -17,6 +17,13 @@ public class Challanfield {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "age")
+    private Integer age;
+
+
+
+
+
     @Column(name = "place")
     private String place;
 
@@ -35,6 +42,24 @@ public class Challanfield {
     @Column(name = "challan_type")
     private String challan_type;
 
+    @Column(name = "challan_rate")
+    private Integer challan_rate ;
+
+    public Integer getChallan_rate() {
+        return challan_rate;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public void setChallan_rate(Integer challan_rate) {
+        this.challan_rate = challan_rate;
+    }
 
     public long getId() {
         return id;
