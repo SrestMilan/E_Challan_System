@@ -7,14 +7,14 @@
 </head>
 <body>
 <div class="hom">
-    <a th:href="@{/}"><h3>HomePage</h3></a>
+    <a th:href="@{/}"><h3>Home Page</h3></a>
 </div>
 <div class="ad">
     <a th:href="@{/newChallanForm}"><h3>Add Challan</h3></a>
 </div>
 <div class="topic">E-Challan System Data</div>
 <div class="main_admin">
-    <table class="table1">
+    <table class="table1" border="1">
         <thead>
         <tr>
             <th>name</th>
@@ -40,7 +40,7 @@
             <td th:text="${challan_save.created_by}"></td>
             <td th:text="${challan_save.challan_type}"></td>
             <td th:text="${challan_save.challan_rate}"></td>
-            <td><button class="btn2">Print</button></a>
+            <td> <a th:href="@{/formUpdate/{id}(id=${challan_save.id})}"><button class="btn2">Print</button></a>
             </td>
         </tr>
         </tbody>
