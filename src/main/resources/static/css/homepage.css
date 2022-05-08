@@ -38,7 +38,7 @@ background-size:cover;
 
 .menu{
     width: 400px;
-    float: left;
+    float: right;
     height: 70px;
 }
 
@@ -51,9 +51,9 @@ ul{
 
 ul li{
     list-style: none;
-    margin-left: 62px;
+    margin-left: px;
     margin-top: 27px;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 ul li a{
@@ -62,6 +62,7 @@ ul li a{
     font-family: Arial;
     font-weight: bold;
     transition: 0.4s ease-in-out;
+    margin-left:100px;
 }
 
 ul li a:hover{

@@ -6,9 +6,12 @@
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
+<div class="hom">
+    <a th:href="@{/}"><h3>HomePage</h3></a>
+</div>
 
-<div class="back">
-    <a th:href="@{/viewTraffic}"><button class="btnnn4">Back</button></a>
+<div class="ad">
+    <a th:href="@{/viewHomePage}"><h3>Back</h3></a>
 </div>
 
 <div class="head">
@@ -18,13 +21,13 @@
 
 <div class="container">
     <header>Update Challan Data</header>
-
     <form action="#" th:action="@{/saveEChallanData}" th:object="${challan_save}" method="POST">
         <div class="form first">
             <div class="details personal">
                 <span class="title">Personal Details</span>
 
                 <div class="fields">
+                    <input type="hidden" th:field="*{id}" />
                     <div class="input-field">
                         <label>Full Name</label>
                         <input type="text" th:field="*{name}" placeholder="Enter your name" required>

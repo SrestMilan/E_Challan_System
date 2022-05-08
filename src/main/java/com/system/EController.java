@@ -61,7 +61,7 @@ public class EController {
         List<String>type= Arrays.asList("Drinking Alcohol","No helmet","No side light","High Speed");
         model.addAttribute("type",type);
 
-        List<String>create= Arrays.asList("Admin");
+        List<String>create= Arrays.asList("Traffic");
         model.addAttribute("create",create);
 
         List<String>v_type= Arrays.asList("Two Wheeler", "Three Wheller","Four Wheeler");
@@ -86,7 +86,7 @@ public class EController {
         List<String>type= Arrays.asList("Drinking Alcohol","No helmet","No side light","High Speed");
         model.addAttribute("type",type);
 
-        List<String>create= Arrays.asList("Admin");
+        List<String>create= Arrays.asList("Traffic");
         model.addAttribute("create",create);
 
         List<String>v_type= Arrays.asList("Two Wheeler", "Three Wheller","Four Wheeler");

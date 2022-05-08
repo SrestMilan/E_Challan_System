@@ -8,6 +8,7 @@ background-size:cover;
 
 }
 .home h3{
+font-size:17px;
 float:right;
 color:white;
 margin-top:-65px;
@@ -27,11 +28,13 @@ margin-top:32px;
 
 th, td {
   text-align: left;
-  padding: 8px;
-  font-size:20px;
+  padding: 15px;
+  font-size:18px;
 
 }
-
+td{
+color:white;
+}
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 th {
@@ -91,7 +94,8 @@ border:none;
 font-weight:bold;
 width:100px;
 height:30px;
-margin-left:30px;
+margin-top:-100px;
+margin-left:150px;
 background:#f21a3e;
 border:none;
 }
@@ -104,9 +108,6 @@ text-align:center;
 margin-top:95px;
 color:white;
 }
-
-
-
 
 .btnnn4{
 font-weight:bold;
