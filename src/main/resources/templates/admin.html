@@ -38,6 +38,8 @@
             <td th:text="${challan_save.created_by}"></td>
             <td th:text="${challan_save.challan_type}"></td>
             <td th:text="${challan_save.challan_rate}"></td>
+
+
             <td> <a th:href="@{/formUpdate/{id}(id=${challan_save.id})}"><button class="btn2">Update</button></a>
                 <a th:href="@{/deleteData/{id}(id=${challan_save.id})}"><button class="btn3">Delete</button></a>
             </td>
