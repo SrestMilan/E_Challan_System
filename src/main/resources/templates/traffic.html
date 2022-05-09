@@ -4,6 +4,7 @@
     <meta charset="ISO-8859-1">
     <title>E-Challan System</title>
     <link th:href="@{/css/style.css}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 <div class="hom">
@@ -13,8 +14,8 @@
     <a th:href="@{/newChallanForm}"><h3>Add Challan</h3></a>
 </div>
 <div class="topic">E-Challan System Data</div>
-<div class="main_admin">
-    <table class="table1" border="1">
+<div class="main_admin" id="pdf">
+    <table id="table1" border="1">
         <thead>
         <tr>
             <th>name</th>
@@ -26,7 +27,7 @@
             <th>created_by</th>
             <th>challan_type</th>
             <th>challan_rate</th>
-            <th class="th8"> Actions </th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -40,13 +41,22 @@
             <td th:text="${challan_save.created_by}"></td>
             <td th:text="${challan_save.challan_type}"></td>
             <td th:text="${challan_save.challan_rate}"></td>
-            <td> <a th:href="@{/formUpdate/{id}(id=${challan_save.id})}"><button class="btn2">Print</button></a>
+            <td><button class="btn2" th:onclick="pdf()">Print</button>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
-
+<script>
+function pdf() {
+ const element= document.getElementById("pdf");
+ const big_width = "1088";
+ const big_height = "604";
+ html2pdf()
+ .from(element)
+ .save();
+   }
+</script>
 
 </body>
 </html>

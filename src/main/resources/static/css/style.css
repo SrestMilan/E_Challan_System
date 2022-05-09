@@ -18,10 +18,10 @@ margin-right:150px;
  color: #ff7200;
 }
 
-.table1{
+#table1{
 border-collapse: collapse;
 border:1px solid white;
-width: 80%;
+width: 60%;
 margin-left:auto;
 margin-right:auto;
 margin-top:32px;
