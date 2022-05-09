@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>HOME PAGE </title>
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="shortcut icon" th:href="@{/image/log2.png}">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
 
         <form id="form" method="post">
             <h2>Login Form</h2>
-            <input type="text" name="userName" placeholder=" userName ">
+            <input type="text" name="userName" placeholder=" Usermame ">
             <input type="password" name="password" placeholder=" Password ">
             <button class="btnn">Login</button>
 

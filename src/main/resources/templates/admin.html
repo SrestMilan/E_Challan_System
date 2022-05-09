@@ -3,13 +3,14 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>E-Challan System</title>
+    <link rel="shortcut icon" th:href="@{/image/log2.png}">
+
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
 <div class="home">
     <a th:href="@{/}"><h3>HomePage</h3></a>
 </div>
-
 <div class="topic">E-Challan System Data</div>
 <div class="main_admin">
     <table class="table1" border="1">
@@ -38,8 +39,6 @@
             <td th:text="${challan_save.created_by}"></td>
             <td th:text="${challan_save.challan_type}"></td>
             <td th:text="${challan_save.challan_rate}"></td>
-
-
             <td> <a th:href="@{/formUpdate/{id}(id=${challan_save.id})}"><button class="btn2">Update</button></a>
                 <a th:href="@{/deleteData/{id}(id=${challan_save.id})}"><button class="btn3">Delete</button></a>
             </td>
@@ -47,7 +46,5 @@
         </tbody>
     </table>
 </div>
-
-
 </body>
 </html>

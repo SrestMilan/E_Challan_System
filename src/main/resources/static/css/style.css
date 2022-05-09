@@ -18,6 +18,10 @@ margin-right:150px;
  color: #ff7200;
 }
 
+.main_admin{
+margin-left:40px;
+
+}
 #table1{
 border-collapse: collapse;
 border:1px solid white;
@@ -69,7 +73,7 @@ font-size:17px;
 width:100px;
 height:30px;
 background-color:#1bbbe4;
-margin-left:1190px;
+margin-left:1210px;
 margin-top:40px;
 border:none;
 
