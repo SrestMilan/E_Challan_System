@@ -63,7 +63,18 @@ font-weight:bold;
 text-align:center;
 font-size:30px;
 }
+.btnprint{
+font-weight:bold;
+font-size:17px;
+width:100px;
+height:30px;
+background-color:#1bbbe4;
+margin-left:1190px;
+margin-top:40px;
+border:none;
 
+
+}
 .btn2{
 font-weight:bold;
 width:100px;

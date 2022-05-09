@@ -27,7 +27,7 @@
             <th>created_by</th>
             <th>challan_type</th>
             <th>challan_rate</th>
-            <th>Action</th>
+
         </tr>
         </thead>
         <tbody>
@@ -41,18 +41,24 @@
             <td th:text="${challan_save.created_by}"></td>
             <td th:text="${challan_save.challan_type}"></td>
             <td th:text="${challan_save.challan_rate}"></td>
-            <td><button class="btn2" th:onclick="pdf()">Print</button>
-            </td>
         </tr>
+
         </tbody>
     </table>
+
 </div>
+<button class="btnprint" th:onclick="pdf()">Print</button>
 <script>
 function pdf() {
  const element= document.getElementById("pdf");
- const big_width = "1088";
- const big_height = "604";
- html2pdf()
+ var opt = {
+  margin:       1,
+  filename:     'myfile.pdf',
+  image:        { type: 'jpeg', quality: 1 },
+  html2canvas:  { scale: 2 },
+  jsPDF:        { unit: 'in', format: 'a3', orientation: 'landscape' }
+};
+ html2pdf().set(opt)
  .from(element)
  .save();
    }
