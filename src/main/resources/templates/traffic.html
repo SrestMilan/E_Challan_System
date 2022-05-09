@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>E-Challan System</title>
+    <title>traffic</title>
     <link th:href="@{/css/style.css}" rel="stylesheet">
     <link rel="shortcut icon" th:href="@{/image/log2.png}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -54,7 +54,7 @@ function pdf() {
  const element= document.getElementById("pdf");
  var opt = {
   margin:       1,
-  filename:     'myfile.pdf',
+  filename:     'challandata.pdf',
   image:        { type: 'jpeg', quality: 1 },
   html2canvas:  { scale: 2 },
   jsPDF:        { unit: 'in', format: 'a3', orientation: 'landscape' }

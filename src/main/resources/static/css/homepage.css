@@ -51,7 +51,6 @@ ul{
 
 ul li{
     list-style: none;
-    margin-left: px;
     margin-top: 27px;
     font-size: 17px;
 }
@@ -62,7 +61,7 @@ ul li a{
     font-family: Arial;
     font-weight: bold;
     transition: 0.4s ease-in-out;
-    margin-left:100px;
+    margin-left:260px;
 }
 
 ul li a:hover{
